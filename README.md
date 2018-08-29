@@ -5,6 +5,7 @@ You will use Express to handle routing. Make sure you deploy your app to Heroku 
 
 # Technologies used
 * Node.js (dotenv, inquirer, mysql, console.table packages)
+* Express.js
 * Javascript
 
 # NPM package installation required
