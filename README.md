@@ -3,18 +3,18 @@ A compatibility-based "FriendFinder" application -- basically a dating app. This
 
 You will use Express to handle routing. Make sure you deploy your app to Heroku so other users can fill it out.
 
-# Technologies used
+# Technologies Used
 * Node.js (dotenv, inquirer, mysql, console.table packages)
 * Express.js
 * Javascript
 
-# NPM package installation required
+# NPM Package Installation Required
 Just run "npm install" in a terminal window after cloning the project. The required packages will be fetched from the package.json file and installed on your machine.
 
 # Security
 TBD
 
-# Demo video
+# Demo Video
 Demo.mp4 is a video demo of the functionality.
 
 # License
