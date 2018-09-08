@@ -1,7 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-var fs = require("fs");
 
 // serve static assets
 // app.use(express.static("__dirname + '/app/public'"));
