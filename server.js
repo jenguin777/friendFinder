@@ -7,8 +7,8 @@ var path = require("path");
 // app.use(express.static("public"));
 
 var app = express();
-// var PORT = process.env.PORT || 8082;
-var PORT = 8082;
+var PORT = process.env.PORT || 8082;
+// var PORT = 8082;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
