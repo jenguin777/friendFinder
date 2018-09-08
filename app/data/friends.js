@@ -1,7 +1,8 @@
 var friends = [
     {
+        // Pug
         "name":"Ahmed",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"https://images.pexels.com/photos/374906/pexels-photo-374906.jpeg?auto=compress&cs=tinysrgb&h=350",
         "scores":[
             5,
             1,
@@ -17,36 +18,52 @@ var friends = [
     },
     {
         "name":"Jane",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"https://phatfriend.files.wordpress.com/2016/04/lovely-cute-animals-15.jpg",
         "scores":[
-            5,
+            2,
             1,
-            4,
-            4,
+            2,
+            3,
             5,
             1,
             2,
-            5,
             4,
-            1
+            2,
+            2
         ]  
     },
     {
         "name":"Bob",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"https://images.pexels.com/photos/50577/hedgehog-animal-baby-cute-50577.jpeg?auto=compress&cs=tinysrgb&h=350",
         "scores":[
             5,
             1,
-            4,
-            4,
+            3,
+            1,
             5,
             1,
             2,
-            5,
+            1,
             4,
             1
         ]
     },
+    {
+        "name":"Tammy",
+        "photo":"https://images.vice.com/vice/images/articles/meta/2015/05/28/why-do-i-want-to-crush-cute-animals-1432782372.jpg?crop=1xw%3A0.8162681912681913xh%3Bcenter%2Ccenter&resize=650%3A*&output-quality=55",
+        "scores":[
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ]
+    }
   ];
 
   module.exports = friends;
