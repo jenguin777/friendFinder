@@ -1,6 +1,5 @@
 var friends = [
     {
-        // Pug
         "name":"Ahmed",
         "photo":"https://images.pexels.com/photos/374906/pexels-photo-374906.jpeg?auto=compress&cs=tinysrgb&h=350",
         "scores":[
