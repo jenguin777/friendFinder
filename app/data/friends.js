@@ -33,7 +33,7 @@ var friends = [
     },
     {
         "name":"Eliza",
-        "photo":"https://images.vice.com/vice/images/articles/meta/2015/05/28/why-do-i-want-to-crush-cute-animals-1432782372.jpg?crop=1xw%3A0.8162681912681913xh%3Bcenter%2Ccenter&resize=650%3A*&output-quality=55",
+        "photo":"http://imgs.abduzeedo.com/files/articles/baby-animals/Baby-Animals-043.jpg",
         "scores":[
             5,
             5,
