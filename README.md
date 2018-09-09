@@ -6,8 +6,8 @@ A compatibility-based "FriendFinder" application -- basically a dating app. This
 * Express.js
 * Javascript
 
-# NPM Package Installation Required
-Just run "npm install" in a terminal window after cloning the project. The required packages will be fetched from the package.json file and installed on your machine.
+# To run the application
+Just run "npm install" in a terminal window after cloning the project. The required packages will be fetched from the package.json file and installed on your machine. Or you can see a deployed version [here.](https://whispering-beyond-26211.herokuapp.com/)
 
 # License
 MIT license applies.
