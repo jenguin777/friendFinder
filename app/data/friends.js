@@ -33,6 +33,22 @@ var friends = [
         ]  
     },
     {
+        "name":"Eliza",
+        "photo":"https://images.vice.com/vice/images/articles/meta/2015/05/28/why-do-i-want-to-crush-cute-animals-1432782372.jpg?crop=1xw%3A0.8162681912681913xh%3Bcenter%2Ccenter&resize=650%3A*&output-quality=55",
+        "scores":[
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+        ]
+    },
+    {
         "name":"Bob",
         "photo":"https://images.pexels.com/photos/50577/hedgehog-animal-baby-cute-50577.jpeg?auto=compress&cs=tinysrgb&h=350",
         "scores":[

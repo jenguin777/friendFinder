@@ -1,6 +1,10 @@
 var friends = require('../data/friends');
+var bodyParser = require("body-parser");
 
 module.exports = function(app) {
+
+    app.use(bodyParser.urlencoded({extended: true}));
+    app.use(bodyParser.json());
 
     // Return all friends
     app.get('/api/friends', function(req, res) {
@@ -13,58 +17,49 @@ module.exports = function(app) {
       newfriend.name.replace(/\s+/g, "");
       console.log("newfriend: " + JSON.stringify(newfriend));
 
-      // Push newfriend to friends array
-      friends.push(newfriend);
-      console.log("friends after newfriend added: " + JSON.stringify(friends));
-    
-      // This is supposed to run but I never see these console logs unless I add the callback function to the match() function. If I do that, the match logic doesn't work
-      var bestMatch = match(newfriend, function(result){
-        console.log(result, "this is result");
-        res.json(result);
-      });
+      // Setting currentLowScore to an initial value that its comparitor will surely be less than
+      var currentLowScore = 100;
+      var bestMatch;
       
-    });
-
-    // When I add the callback function cb, the modal works but the match is incorrect...I believe it's because it never makes it through the array...it stops partway through and I get an error "Error: Can't set headers after they are sent." When I take the callback function out, the modal no longer works but the match is correct in the Terminal output.
-
-    function match(newfriend, cb) {
-    // function match(newfriend) {
-    
-    // Setting this low score to an initial value that its comparitor will surely be less than
-    var currentLowScore = 100;
-    var bestMatch;
-    
-    // Loop through the friends array
-    
-      // added "-1" to "i < friends.length" because newfriend will always be added to the end of the array, so this way newfriend will never be equal to currentFriend
-      for (var i=0; i < friends.length - 1; i++ ){
-        var currentFriend = friends[i];
-        var totalDifference = 0;
-        console.log(totalDifference, "total difference");
-        console.log(currentFriend, "this is the current friend");
+        // Loop through the friends array
+        for (var i=0; i < friends.length; i++ ){
+          var currentFriend = friends[i];
+          var totalDifference = 0;
+          console.log(totalDifference, "begin total difference");
+          console.log(currentFriend, "this is the current friend");
 
           // Within each friend in the friends array, loop through each friend's (aka currentFriend's) scores and compare them to newfriend's scores
-            for( var j=0; j < currentFriend.scores.length; j++) {
+            for(var j=0; j < currentFriend.scores.length; j++) {
 
               // Take the absolute value of the difference between newfriend's and currentFriend's scores for all questions
-              var difference =  Math.abs(newfriend.scores[j] - currentFriend.scores[j]);
+              var difference = Math.abs(parseInt(newfriend.scores[j]) - parseInt(currentFriend.scores[j]));
+              console.log("difference: " + difference);
 
               // Add each difference to totalDifference
-              totalDifference += difference;
-              
+              totalDifference += difference; 
+              console.log("totalDifference: " + totalDifference);
             }
+
             // Find the lowest totalDifference
-            if( totalDifference < currentLowScore ) {
-              lowScore = totalDifference;
+            console.log("currentLowScore: " + currentLowScore);
+            console.log("totalDifference: " + totalDifference);
+            if(totalDifference < currentLowScore) {
+              currentLowScore = totalDifference;
+              console.log("currentLowScore after comparison to totalDifference: " + currentLowScore);
               bestMatch = currentFriend;
             }
 
-      console.log(bestMatch, "this is the best match");
-      // return bestMatch;
+        }
 
-      cb(bestMatch);
-    }
+      console.log(bestMatch, "this is bestMatch");
+      res.json(bestMatch);
 
-  }
+      // Push newfriend to friends array
+      friends.push(newfriend);
+
+      console.log("friends after newfriend added: " + JSON.stringify(friends));
+      
+      
+    });
 
 };
